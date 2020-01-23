@@ -17,3 +17,11 @@ We have to override the template of the cart form, because the button can't be r
 ##Assignment 1.3 - Design changes to product overview
 We don't want to use layered navigation, so let's remove the complete sidebar on the product overview page. Now we can also use the 1column layout because we have no left column anymore.
 I've also removed the add to wishlist and add to compare buttons from the items so the add to cart button really popus up.
+
+##Assignment 1.4 - Design changes to product detail
+We want to add a list of the 5 newest products in our store at the bottom of the product detail page.
+
+I have used the widget that Magento provides, but I have inserted it through layout.xml instead of through the database (admin) like you would normally do with a widget.
+To set the maximum items to 5 I have created an action that calls the 'setProductsCount' function in the block.
+
+Note; don't do this in a production website, because all product pages will be invalidated in Varnish when a new product is added or a newer product is changed.
