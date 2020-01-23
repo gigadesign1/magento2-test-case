@@ -1,0 +1,10 @@
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+    <title>ESTG Testcase</title>
+    <!-- Parent is blank because Luma shouldn't be used as base to create custom theme's:
+    https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/themes/theme-overview.html -->
+    <parent>Magento/blank</parent>
+    <media>
+        <preview_image>media/preview.jpg</preview_image>
+    </media>
+</theme>
