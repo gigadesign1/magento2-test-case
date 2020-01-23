@@ -13,3 +13,7 @@ The downside of this approach is that when a design is strict, an update by Mage
 Let's remove the 'clear cart' button, because when users have spent an hour filling their cart and they mistake it for the update button the're not happy :(
 
 We have to override the template of the cart form, because the button can't be removed with the layout file since it's not a block
+
+##Assignment 1.3 - Design changes to product overview
+We don't want to use layered navigation, so let's remove the complete sidebar on the product overview page. Now we can also use the 1column layout because we have no left column anymore.
+I've also removed the add to wishlist and add to compare buttons from the items so the add to cart button really popus up.
