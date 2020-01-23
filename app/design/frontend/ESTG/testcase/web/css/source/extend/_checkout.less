@@ -1,0 +1,26 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .checkout-index-index label.label {
+    color: @color-blue3;
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .checkout-index-index label.label {
+    color:@color-brownie1;
+  }
+}
+
+//
+//  Mega
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+}
