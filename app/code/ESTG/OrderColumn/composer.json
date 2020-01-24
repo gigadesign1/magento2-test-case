@@ -1,0 +1,13 @@
+{
+  "name": "estg/module-order-column",
+  "description": "Adds a column to the order table, grid and api",
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "ESTG\\OrderColumn\\": ""
+    }
+  }
+}

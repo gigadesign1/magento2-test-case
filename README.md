@@ -25,3 +25,17 @@ I have used the widget that Magento provides, but I have inserted it through lay
 To set the maximum items to 5 I have created an action that calls the 'setProductsCount' function in the block.
 
 Note; don't do this in a production website, because all product pages will be invalidated in Varnish when a new product is added or a newer product is changed.
+
+##Assignment 2.1 - Create module for extra column in order table
+I have created a module that adds a column to the sales_order table and makes it available in the order grid where it can be filtered.
+Excuse me for the lack of possibility to enter a remark on the frontend. I would have added a field in the checkout and copied the value from the quote to the order, but due to time this part is not done.
+
+You can edit the remark through the API though. Send a PUT request to : /rest/V1/orders/{order_id}/remarks
+With the body:
+`{"remarks": {"remarks": "Afleveren bij de buren"}}`
+
+There is a special permission needed to edit a remark for an order since there is no permission to edit an order.
+
+Also; I did not use /rest/V1/orders/{order_id} (so without the /remark) because it is a core concept that an order can **not** be changed. It can only be updated by the 'flow' of creating invoices and shipments, but never edited by a user.
+
+To improve the module I would rename it to ESTG_OrderRemarks (I did not have inspriration on the column name when I started the module). 

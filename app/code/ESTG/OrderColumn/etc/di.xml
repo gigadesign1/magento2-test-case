@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="ESTG\OrderColumn\Api\RemarksManagementInterface" type="ESTG\OrderColumn\Model\RemarksManagement"/>
+    <preference for="ESTG\OrderColumn\Api\RemarksInterface" type="ESTG\OrderColumn\Model\Remarks"/>
+
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="remarks" xsi:type="string">sales_order.remarks</item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>
