@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="cataloginventory">
+			<group id="stock_notice" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1"
+				   showInStore="1">
+				<label>Stock Notice Configuration</label>
+				<field id="enabled" translate="label comment" type="select" sortOrder="1" showInDefault="1"
+					   showInWebsite="1" showInStore="1" canRestore="1">
+					<label>Enable Notice</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="stock_level" translate="label comment" type="text" sortOrder="10" showInDefault="1"
+					   showInWebsite="1" showInStore="1" canRestore="1">
+					<label>Stock Level</label>
+					<comment>On what stock level do we need to show the notice?</comment>
+					<validate>required-entry validate-digits</validate>
+					<depends>
+						<field id="enabled">1</field>
+					</depends>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

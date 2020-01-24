@@ -1,0 +1,6 @@
+<?php
+/** @var \ESTG\StockNotice\Block\StockNotice $block */
+?>
+<?php if ($block->getCurrentStock() < $block->getMinimalStockForNotice()): ?>
+    <?= $block->escapeHtml(__('Warning: there are just %1 left in stock, order now!', $block->getCurrentStock())); ?>
+<?php endif; ?>

@@ -1,0 +1,13 @@
+{
+  "name": "estg/module-stock-notice",
+  "description": "Adds a stock notice on the product detail page",
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "ESTG\\StockNotice\\": ""
+    }
+  }
+}

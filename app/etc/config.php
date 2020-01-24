@@ -239,6 +239,7 @@ return [
         'Amazon_Payment' => 1,
         'Dotdigitalgroup_Email' => 1,
         'ESTG_OrderColumn' => 1,
+        'ESTG_StockNotice' => 1,
         'Klarna_Core' => 1,
         'Klarna_Ordermanagement' => 1,
         'Klarna_Kp' => 1,
@@ -247,5 +248,15 @@ return [
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
         'Yotpo_Yotpo' => 1
+    ],
+    'system' => [
+        'default' => [
+            'cataloginventory' => [
+                'stock_notice' => [
+                    'enabled' => '1',
+                    'stock_level' => '10'
+                ]
+            ]
+        ]
     ]
 ];

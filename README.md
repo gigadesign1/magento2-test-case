@@ -39,3 +39,13 @@ There is a special permission needed to edit a remark for an order since there i
 Also; I did not use /rest/V1/orders/{order_id} (so without the /remark) because it is a core concept that an order can **not** be changed. It can only be updated by the 'flow' of creating invoices and shipments, but never edited by a user.
 
 To improve the module I would rename it to ESTG_OrderRemarks (I did not have inspriration on the column name when I started the module). 
+
+##Assignment 2.2 - Add stock notice to product detail page
+In high traffic and high available webshops my advise would be to not do this. Magento purges the product detail page and all category pages by default when it's sold, but you don't want to do that. Displaying the amount of stock doesn't help in that requirement.
+
+But if we want to display the quantity left, we have to use the new inventory module, since the cataloginventory is deprecated.
+Since stock can be from multiple sources I have to loop through all the sources to get the sum of all stocks. By default an order will be dispatched over all available sources, so this is the actual maximum a customer can order through the website.
+
+I have used two kinds of operations to set the default value of configuration. By adding the 'enabled' status to the config.xml and to the config.php it is not possible to change it through the admin. By adding the stock level only to config.php it is set as default, but it is possible to be changed in the admin.
+
+I've also used a second configuration to enable or disable the feature and added it to the layout.xml. In this case the whole block won't get instanciated when the configuration is put on disabled.
